@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "monumenta-dialogue",
+	"version": "${version}",
+	"name": "Monumenta Dialogue",
+	"description": "Adds Dialogue interface for Monumenta MMO",
+	"authors": [
+		"Lucifer"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/monumenta-dialogue/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"main": [
+			"com.lucifer.MonumentaDialogue"
+		],
+		"client": [
+			"com.lucifer.MonumentaDialogueClient"
+		]
+	},
+	"mixins": [
+		"monumenta-dialogue.mixins.json",
+		{
+			"config": "monumenta-dialogue.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
